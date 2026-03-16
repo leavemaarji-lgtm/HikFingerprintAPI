@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/bg">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+        android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+        android:background="@color/surface" app:titleTextColor="@color/cyan"/>
+    <TextView android:id="@+id/tvConnStatus"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/card" android:padding="10dp"
+        android:textColor="@color/muted" android:textSize="11sp"
+        android:text="Not connected — tap Connect Device"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+          android:orientation="vertical" android:padding="12dp">
+        <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:columnCount="2" android:useDefaultMargins="true">
+          <Button android:id="@+id/btnConnect" android:text="Connect Device"
+              android:layout_width="0dp" android:layout_columnWeight="1"
+              android:backgroundTint="@color/cyan" android:textColor="@color/black"/>
+          <Button android:id="@+id/btnEnrol" android:text="Enrol User"
+              android:layout_width="0dp" android:layout_columnWeight="1"
+              android:backgroundTint="@color/green" android:textColor="@color/black"/>
+          <Button android:id="@+id/btnFpConfig" android:text="FP Config"
+              android:layout_width="0dp" android:layout_columnWeight="1"
+              android:layout_marginTop="8dp" android:backgroundTint="@color/primary" android:textColor="@color/white"/>
+          <Button android:id="@+id/btnDevConfig" android:text="Device Config"
+              android:layout_width="0dp" android:layout_columnWeight="1"
+              android:layout_marginTop="8dp" android:backgroundTint="@color/primary" android:textColor="@color/white"/>
+          <Button android:id="@+id/btnAccessRules" android:text="Access Rules"
+              android:layout_width="0dp" android:layout_columnWeight="1"
+              android:layout_marginTop="8dp" android:backgroundTint="@color/amber" android:textColor="@color/black"/>
+          <Button android:id="@+id/btnEvents" android:text="Events Log"
+              android:layout_width="0dp" android:layout_columnWeight="1"
+              android:layout_marginTop="8dp" android:backgroundTint="@color/amber" android:textColor="@color/black"/>
+          <Button android:id="@+id/btnDoorControl" android:text="Door Control"
+              android:layout_width="0dp" android:layout_columnWeight="1"
+              android:layout_marginTop="8dp" android:backgroundTint="@color/red" android:textColor="@color/white"/>
+          <Button android:id="@+id/btnCloud" android:text="Cloud Push"
+              android:layout_width="0dp" android:layout_columnWeight="1"
+              android:layout_marginTop="8dp" android:backgroundTint="#7C3AED" android:textColor="@color/white"/>
+          <Button android:id="@+id/btnBridge" android:text="Cross-Network Setup"
+              android:layout_width="match_parent" android:layout_columnSpan="2"
+              android:layout_marginTop="8dp" android:backgroundTint="@color/surface"
+              android:textColor="@color/cyan"/>
+        </GridLayout>
+      </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent" android:layout_height="56dp"
+        android:background="@color/surface"
+        app:menu="@menu/bottom_nav"
+        app:itemIconTint="@color/text_secondary"
+        app:itemTextColor="@color/text_secondary"/>
+</LinearLayout>

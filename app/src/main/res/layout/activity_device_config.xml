@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg" android:padding="12dp">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <TextView android:text="SYSTEM INFORMATION" android:textColor="@color/cyan" android:textSize="11sp" android:layout_marginBottom="8dp"/>
+    <EditText android:id="@+id/editDevName" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/surface" android:textColor="@color/text_primary"
+        android:hint="Device Name" android:textColorHint="@color/muted"
+        android:padding="10dp" android:inputType="text" android:layout_marginBottom="6dp"/>
+    <EditText android:id="@+id/editDevLoc" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/surface" android:textColor="@color/text_primary"
+        android:hint="Location (e.g. Main Entrance)" android:textColorHint="@color/muted"
+        android:padding="10dp" android:inputType="text" android:layout_marginBottom="8dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginBottom="12dp">
+      <Button android:id="@+id/btnReadDev" android:layout_width="0dp" android:layout_weight="1"
+          android:layout_height="44dp" android:text="Read Info"
+          android:backgroundTint="@color/surface" android:textColor="@color/cyan" android:layout_marginEnd="4dp"/>
+      <Button android:id="@+id/btnSaveDev" android:layout_width="0dp" android:layout_weight="1"
+          android:layout_height="44dp" android:text="Save Info"
+          android:backgroundTint="@color/green" android:textColor="@color/black"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/border" android:layout_marginBottom="10dp"/>
+    <TextView android:text="NETWORK SETTINGS" android:textColor="@color/cyan" android:textSize="11sp" android:layout_marginBottom="8dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:background="@color/card" android:gravity="center_vertical"
+        android:paddingStart="12dp" android:paddingEnd="12dp" android:orientation="horizontal" android:layout_marginBottom="8dp">
+      <TextView android:text="DHCP Mode" android:textColor="@color/text_primary" android:textSize="12sp" android:layout_weight="1"/>
+      <Switch android:id="@+id/switchDHCP" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <EditText android:id="@+id/editNewIp" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/surface" android:textColor="@color/text_primary"
+        android:hint="IP Address" android:textColorHint="@color/muted"
+        android:padding="10dp" android:inputType="text" android:layout_marginBottom="6dp"/>
+    <EditText android:id="@+id/editSubnet" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/surface" android:textColor="@color/text_primary"
+        android:hint="Subnet Mask (255.255.255.0)" android:textColorHint="@color/muted"
+        android:padding="10dp" android:inputType="text" android:layout_marginBottom="6dp"/>
+    <EditText android:id="@+id/editGateway" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/surface" android:textColor="@color/text_primary"
+        android:hint="Default Gateway" android:textColorHint="@color/muted"
+        android:padding="10dp" android:inputType="text" android:layout_marginBottom="6dp"/>
+    <EditText android:id="@+id/editDns" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/surface" android:textColor="@color/text_primary"
+        android:hint="DNS Server" android:textColorHint="@color/muted"
+        android:padding="10dp" android:inputType="text" android:layout_marginBottom="8dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginBottom="10dp">
+      <Button android:id="@+id/btnApplyNet" android:layout_width="0dp" android:layout_weight="1"
+          android:layout_height="44dp" android:text="Apply Network"
+          android:backgroundTint="@color/primary" android:textColor="@color/white" android:layout_marginEnd="4dp"/>
+      <Button android:id="@+id/btnReboot" android:layout_width="0dp" android:layout_weight="1"
+          android:layout_height="44dp" android:text="Reboot Device"
+          android:backgroundTint="@color/red" android:textColor="@color/white"/>
+    </LinearLayout>
+    <TextView android:id="@+id/tvResponse" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/card"
+        android:textColor="@color/muted" android:textSize="10sp" android:padding="10dp"
+        android:text="Response appears here" android:fontFamily="monospace"/>
+  </LinearLayout>
+</ScrollView>

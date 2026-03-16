@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/bg" android:padding="12dp">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+      android:orientation="horizontal" android:layout_marginBottom="6dp">
+    <EditText android:id="@+id/editFrom" android:layout_width="0dp" android:layout_weight="1"
+        android:layout_height="wrap_content" android:background="@color/surface"
+        android:textColor="@color/text_primary" android:hint="From: 2025-01-01T00:00:00"
+        android:textColorHint="@color/muted" android:padding="8dp" android:inputType="text"
+        android:textSize="11sp" android:layout_marginEnd="4dp"/>
+    <EditText android:id="@+id/editTo" android:layout_width="0dp" android:layout_weight="1"
+        android:layout_height="wrap_content" android:background="@color/surface"
+        android:textColor="@color/text_primary" android:hint="To: 2026-01-01T23:59:59"
+        android:textColorHint="@color/muted" android:padding="8dp" android:inputType="text"
+        android:textSize="11sp" android:layout_marginStart="4dp"/>
+  </LinearLayout>
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+      android:orientation="horizontal" android:layout_marginBottom="8dp">
+    <Button android:id="@+id/btnFetch" android:layout_width="0dp" android:layout_weight="1"
+        android:layout_height="44dp" android:text="Fetch Events"
+        android:backgroundTint="@color/cyan" android:textColor="@color/black" android:layout_marginEnd="4dp"/>
+    <Button android:id="@+id/btnPush" android:layout_width="0dp" android:layout_weight="1"
+        android:layout_height="44dp" android:text="Push to Cloud"
+        android:backgroundTint="#7C3AED" android:textColor="@color/white"/>
+  </LinearLayout>
+  <TextView android:id="@+id/tvCount" android:layout_width="match_parent"
+      android:layout_height="wrap_content" android:text="No events loaded"
+      android:textColor="@color/muted" android:textSize="11sp" android:layout_marginBottom="6dp"/>
+  <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+    <TextView android:id="@+id/tvEvents" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/card"
+        android:textColor="@color/text_primary" android:textSize="11sp" android:padding="10dp"
+        android:text="Tap Fetch Events to load access log" android:lineSpacingExtra="4dp"/>
+  </ScrollView>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <color name="bg">#07080D</color>
+    <color name="surface">#0C0E16</color>
+    <color name="card">#131620</color>
+    <color name="border">#1C2033</color>
+    <color name="cyan">#00E5FF</color>
+    <color name="green">#00E676</color>
+    <color name="red">#FF1744</color>
+    <color name="amber">#FFD740</color>
+    <color name="muted">#4A5580</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="text_primary">#DDE6FF</color>
+    <color name="text_secondary">#8899CC</color>
+    <color name="primary">#0D47A1</color>
+    <color name="primary_dark">#002171</color>
+</resources>

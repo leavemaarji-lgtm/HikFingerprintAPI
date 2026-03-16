@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg" android:padding="12dp">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+      android:orientation="vertical">
+    <TextView android:text="STEP 1 — ADD USER RECORD" android:textColor="@color/green"
+        android:textSize="11sp" android:layout_marginBottom="8dp"/>
+    <EditText android:id="@+id/editEmpNo" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/surface"
+        android:textColor="@color/text_primary" android:hint="Employee No (e.g. EMP001)"
+        android:textColorHint="@color/muted" android:padding="10dp" android:inputType="text" android:layout_marginBottom="6dp"/>
+    <EditText android:id="@+id/editName" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/surface"
+        android:textColor="@color/text_primary" android:hint="Full Name"
+        android:textColorHint="@color/muted" android:padding="10dp" android:inputType="textPersonName" android:layout_marginBottom="6dp"/>
+    <EditText android:id="@+id/editCard" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/surface"
+        android:textColor="@color/text_primary" android:hint="Card Number (optional)"
+        android:textColorHint="@color/muted" android:padding="10dp" android:inputType="number" android:layout_marginBottom="6dp"/>
+    <Spinner android:id="@+id/spinnerUserType" android:layout_width="match_parent"
+        android:layout_height="48dp" android:background="@color/surface" android:layout_marginBottom="6dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginBottom="6dp">
+      <EditText android:id="@+id/editFrom" android:layout_width="0dp" android:layout_weight="1"
+          android:layout_height="wrap_content" android:background="@color/surface"
+          android:textColor="@color/text_primary" android:hint="Valid From: 2025-01-01"
+          android:textColorHint="@color/muted" android:padding="10dp" android:inputType="text" android:layout_marginEnd="4dp"/>
+      <EditText android:id="@+id/editTo" android:layout_width="0dp" android:layout_weight="1"
+          android:layout_height="wrap_content" android:background="@color/surface"
+          android:textColor="@color/text_primary" android:hint="Valid To: 2026-12-31"
+          android:textColorHint="@color/muted" android:padding="10dp" android:inputType="text" android:layout_marginStart="4dp"/>
+    </LinearLayout>
+    <Button android:id="@+id/btnAddUser" android:layout_width="match_parent"
+        android:layout_height="48dp" android:text="Add User to Device"
+        android:backgroundTint="@color/green" android:textColor="@color/black" android:layout_marginBottom="14dp"/>
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:background="@color/border" android:layout_marginBottom="14dp"/>
+    <TextView android:text="STEP 2 — UPLOAD FINGERPRINT TEMPLATE" android:textColor="@color/cyan"
+        android:textSize="11sp" android:layout_marginBottom="8dp"/>
+    <EditText android:id="@+id/editFpEmp" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/surface"
+        android:textColor="@color/text_primary" android:hint="Employee No"
+        android:textColorHint="@color/muted" android:padding="10dp" android:inputType="text" android:layout_marginBottom="6dp"/>
+    <Spinner android:id="@+id/spinnerFinger" android:layout_width="match_parent"
+        android:layout_height="48dp" android:background="@color/surface" android:layout_marginBottom="6dp"/>
+    <EditText android:id="@+id/editFpData" android:layout_width="match_parent"
+        android:layout_height="90dp" android:background="@color/surface"
+        android:textColor="@color/text_primary" android:textSize="10sp"
+        android:hint="Paste base64 fingerprint template data here"
+        android:textColorHint="@color/muted" android:padding="10dp"
+        android:inputType="textMultiLine" android:gravity="top" android:layout_marginBottom="8dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginBottom="10dp">
+      <Button android:id="@+id/btnUploadFp" android:layout_width="0dp" android:layout_weight="2"
+          android:layout_height="48dp" android:text="Upload Fingerprint"
+          android:backgroundTint="@color/cyan" android:textColor="@color/black" android:layout_marginEnd="4dp"/>
+      <Button android:id="@+id/btnDeleteFp" android:layout_width="0dp" android:layout_weight="1"
+          android:layout_height="48dp" android:text="Delete FP"
+          android:backgroundTint="@color/red" android:textColor="@color/white"/>
+    </LinearLayout>
+    <TextView android:id="@+id/tvResponse" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/card"
+        android:textColor="@color/muted" android:textSize="10sp" android:padding="10dp"
+        android:text="Response appears here" android:fontFamily="monospace"/>
+  </LinearLayout>
+</ScrollView>

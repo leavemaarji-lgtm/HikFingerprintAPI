@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg" android:padding="12dp">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <TextView android:text="FINGERPRINT READER CONFIGURATION" android:textColor="@color/cyan"
+        android:textSize="11sp" android:letterSpacing="0.05" android:layout_marginBottom="10dp"/>
+    <Spinner android:id="@+id/spinnerMode" android:layout_width="match_parent"
+        android:layout_height="48dp" android:background="@color/surface" android:layout_marginBottom="8dp"/>
+    <EditText android:id="@+id/editThreshold" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/surface"
+        android:textColor="@color/text_primary" android:hint="Match Threshold (1-100, default 50)"
+        android:textColorHint="@color/muted" android:padding="10dp"
+        android:inputType="number" android:text="50" android:layout_marginBottom="6dp"/>
+    <EditText android:id="@+id/editRetries" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/surface"
+        android:textColor="@color/text_primary" android:hint="Max Retries (default 3)"
+        android:textColorHint="@color/muted" android:padding="10dp"
+        android:inputType="number" android:text="3" android:layout_marginBottom="6dp"/>
+    <EditText android:id="@+id/editLockDur" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/surface"
+        android:textColor="@color/text_primary" android:hint="Lockout Duration seconds (default 30)"
+        android:textColorHint="@color/muted" android:padding="10dp"
+        android:inputType="number" android:text="30" android:layout_marginBottom="10dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:background="@color/card" android:gravity="center_vertical"
+        android:paddingStart="12dp" android:paddingEnd="12dp" android:orientation="horizontal" android:layout_marginBottom="2dp">
+      <TextView android:text="Live Finger Detection (LFD)" android:textColor="@color/text_primary" android:textSize="12sp" android:layout_weight="1"/>
+      <Switch android:id="@+id/switchLFD" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:background="@color/card" android:gravity="center_vertical"
+        android:paddingStart="12dp" android:paddingEnd="12dp" android:orientation="horizontal" android:layout_marginBottom="2dp">
+      <TextView android:text="1:N Identification" android:textColor="@color/text_primary" android:textSize="12sp" android:layout_weight="1"/>
+      <Switch android:id="@+id/switch1N" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:background="@color/card" android:gravity="center_vertical"
+        android:paddingStart="12dp" android:paddingEnd="12dp" android:orientation="horizontal" android:layout_marginBottom="2dp">
+      <TextView android:text="Duress Fingerprint" android:textColor="@color/text_primary" android:textSize="12sp" android:layout_weight="1"/>
+      <Switch android:id="@+id/switchDuress" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:background="@color/card" android:gravity="center_vertical"
+        android:paddingStart="12dp" android:paddingEnd="12dp" android:orientation="horizontal" android:layout_marginBottom="12dp">
+      <TextView android:text="Wiegand Output" android:textColor="@color/text_primary" android:textSize="12sp" android:layout_weight="1"/>
+      <Switch android:id="@+id/switchWiegand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+      <Button android:id="@+id/btnReadCfg" android:layout_width="0dp" android:layout_weight="1"
+          android:layout_height="48dp" android:text="Read Config"
+          android:backgroundTint="@color/surface" android:textColor="@color/cyan" android:layout_marginEnd="4dp"/>
+      <Button android:id="@+id/btnSaveCfg" android:layout_width="0dp" android:layout_weight="1"
+          android:layout_height="48dp" android:text="Save to Device"
+          android:backgroundTint="@color/green" android:textColor="@color/black"/>
+    </LinearLayout>
+    <TextView android:id="@+id/tvResponse" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/card"
+        android:textColor="@color/muted" android:textSize="10sp" android:padding="10dp"
+        android:text="Response appears here" android:fontFamily="monospace"/>
+  </LinearLayout>
+</ScrollView>

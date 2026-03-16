@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg" android:padding="12dp">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <TextView android:text="DOOR CONFIGURATION" android:textColor="@color/amber" android:textSize="11sp" android:layout_marginBottom="8dp"/>
+    <EditText android:id="@+id/editOpenDur" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/surface" android:textColor="@color/text_primary"
+        android:hint="Door Open Duration (seconds)" android:textColorHint="@color/muted"
+        android:padding="10dp" android:inputType="number" android:text="5" android:layout_marginBottom="6dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:background="@color/card" android:gravity="center_vertical"
+        android:paddingStart="12dp" android:paddingEnd="12dp" android:orientation="horizontal" android:layout_marginBottom="2dp">
+      <TextView android:text="Anti-Passback" android:textColor="@color/text_primary" android:textSize="12sp" android:layout_weight="1"/>
+      <Switch android:id="@+id/switchAPB" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:background="@color/card" android:gravity="center_vertical"
+        android:paddingStart="12dp" android:paddingEnd="12dp" android:orientation="horizontal" android:layout_marginBottom="2dp">
+      <TextView android:text="Door Open Too Long Alarm" android:textColor="@color/text_primary" android:textSize="12sp" android:layout_weight="1"/>
+      <Switch android:id="@+id/switchDOTL" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:background="@color/card" android:gravity="center_vertical"
+        android:paddingStart="12dp" android:paddingEnd="12dp" android:orientation="horizontal" android:layout_marginBottom="2dp">
+      <TextView android:text="Forced Open Alarm" android:textColor="@color/text_primary" android:textSize="12sp" android:layout_weight="1"/>
+      <Switch android:id="@+id/switchForced" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:background="@color/card" android:gravity="center_vertical"
+        android:paddingStart="12dp" android:paddingEnd="12dp" android:orientation="horizontal" android:layout_marginBottom="8dp">
+      <TextView android:text="Duress Alarm" android:textColor="@color/text_primary" android:textSize="12sp" android:layout_weight="1"/>
+      <Switch android:id="@+id/switchDuressAlarm" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+      <Button android:id="@+id/btnReadDoor" android:layout_width="0dp" android:layout_weight="1"
+          android:layout_height="44dp" android:text="Read Door Config"
+          android:backgroundTint="@color/surface" android:textColor="@color/cyan" android:layout_marginEnd="4dp"/>
+      <Button android:id="@+id/btnSaveDoor" android:layout_width="0dp" android:layout_weight="1"
+          android:layout_height="44dp" android:text="Save Door Config"
+          android:backgroundTint="@color/amber" android:textColor="@color/black"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/border" android:layout_marginBottom="10dp"/>
+    <TextView android:text="WEEKLY ACCESS SCHEDULE" android:textColor="@color/green" android:textSize="11sp" android:layout_marginBottom="8dp"/>
+    <EditText android:id="@+id/editSchedEmp" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/surface" android:textColor="@color/text_primary"
+        android:hint="Employee No to apply schedule" android:textColorHint="@color/muted"
+        android:padding="10dp" android:inputType="text" android:layout_marginBottom="8dp"/>
+    <com.google.android.material.chip.ChipGroup android:id="@+id/chipGroupDays"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+      <com.google.android.material.chip.Chip android:id="@+id/chipMon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mon" style="@style/Widget.MaterialComponents.Chip.Filter"/>
+      <com.google.android.material.chip.Chip android:id="@+id/chipTue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tue" style="@style/Widget.MaterialComponents.Chip.Filter"/>
+      <com.google.android.material.chip.Chip android:id="@+id/chipWed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wed" style="@style/Widget.MaterialComponents.Chip.Filter"/>
+      <com.google.android.material.chip.Chip android:id="@+id/chipThu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thu" style="@style/Widget.MaterialComponents.Chip.Filter"/>
+      <com.google.android.material.chip.Chip android:id="@+id/chipFri" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fri" style="@style/Widget.MaterialComponents.Chip.Filter"/>
+      <com.google.android.material.chip.Chip android:id="@+id/chipSat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sat" style="@style/Widget.MaterialComponents.Chip.Filter"/>
+      <com.google.android.material.chip.Chip android:id="@+id/chipSun" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sun" style="@style/Widget.MaterialComponents.Chip.Filter"/>
+    </com.google.android.material.chip.ChipGroup>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+      <EditText android:id="@+id/editStartTime" android:layout_width="0dp" android:layout_weight="1"
+          android:layout_height="wrap_content" android:background="@color/surface"
+          android:textColor="@color/text_primary" android:hint="Start 08:00"
+          android:textColorHint="@color/muted" android:padding="10dp" android:inputType="text" android:layout_marginEnd="4dp"/>
+      <EditText android:id="@+id/editEndTime" android:layout_width="0dp" android:layout_weight="1"
+          android:layout_height="wrap_content" android:background="@color/surface"
+          android:textColor="@color/text_primary" android:hint="End 18:00"
+          android:textColorHint="@color/muted" android:padding="10dp" android:inputType="text" android:layout_marginStart="4dp"/>
+    </LinearLayout>
+    <Button android:id="@+id/btnApplySched" android:layout_width="match_parent"
+        android:layout_height="48dp" android:text="Apply Schedule"
+        android:backgroundTint="@color/green" android:textColor="@color/black" android:layout_marginBottom="8dp"/>
+    <TextView android:id="@+id/tvResponse" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/card"
+        android:textColor="@color/muted" android:textSize="10sp" android:padding="10dp"
+        android:text="Response appears here" android:fontFamily="monospace"/>
+  </LinearLayout>
+</ScrollView>

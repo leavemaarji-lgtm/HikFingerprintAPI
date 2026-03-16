@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/bg" android:padding="12dp">
+  <TextView android:text="CROSS-NETWORK RELAY SERVER" android:textColor="@color/green"
+      android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+  <TextView android:text="Deploy relay-server.js on any server that can reach your Hikvision device. Your phone connects to the relay from any network."
+      android:textColor="@color/amber" android:textSize="11sp" android:background="@color/card"
+      android:padding="10dp" android:layout_marginBottom="12dp" android:lineSpacingExtra="3dp"/>
+  <Button android:id="@+id/btnCopyCode" android:layout_width="wrap_content"
+      android:layout_height="36dp" android:text="Copy relay-server.js"
+      android:backgroundTint="@color/green" android:textColor="@color/black"
+      android:layout_marginBottom="8dp"/>
+  <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+    <TextView android:id="@+id/tvRelayCode" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/card"
+        android:textColor="@color/green" android:textSize="10sp" android:padding="12dp"
+        android:fontFamily="monospace" android:lineSpacingExtra="3dp"/>
+  </ScrollView>
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg" android:padding="14dp">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <TextView android:text="NETWORK MODE" android:textColor="@color/muted"
+        android:textSize="10sp" android:layout_marginBottom="6dp"/>
+    <RadioGroup android:id="@+id/radioGroupMode" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+      <RadioButton android:id="@+id/radioLocal" android:text="Same Network (Local LAN)"
+          android:textColor="@color/text_primary" android:checked="true"/>
+      <RadioButton android:id="@+id/radioRelay" android:text="★ Different Network (Relay Server)"
+          android:textColor="@color/green"/>
+    </RadioGroup>
+
+    <LinearLayout android:id="@+id/layoutRelayFields" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical"
+        android:visibility="gone">
+      <TextView android:text="Relay Server URL" android:textColor="@color/green"
+          android:textSize="11sp" android:layout_marginBottom="4dp"/>
+      <EditText android:id="@+id/editRelayUrl" android:layout_width="match_parent"
+          android:layout_height="wrap_content" android:background="@color/surface"
+          android:textColor="@color/text_primary" android:hint="https://your-relay.com/api/hik"
+          android:textColorHint="@color/muted" android:padding="10dp"
+          android:inputType="textUri" android:layout_marginBottom="8dp"/>
+      <TextView android:text="Relay API Key" android:textColor="@color/green"
+          android:textSize="11sp" android:layout_marginBottom="4dp"/>
+      <EditText android:id="@+id/editRelayKey" android:layout_width="match_parent"
+          android:layout_height="wrap_content" android:background="@color/surface"
+          android:textColor="@color/text_primary" android:hint="your-secret-relay-key"
+          android:textColorHint="@color/muted" android:padding="10dp"
+          android:inputType="textPassword" android:layout_marginBottom="12dp"/>
+    </LinearLayout>
+
+    <TextView android:text="Label (optional)" android:textColor="@color/muted"
+        android:textSize="11sp" android:layout_marginBottom="4dp"/>
+    <EditText android:id="@+id/editLabel" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/surface"
+        android:textColor="@color/text_primary" android:hint="e.g. Main Entrance"
+        android:textColorHint="@color/muted" android:padding="10dp"
+        android:inputType="text" android:layout_marginBottom="8dp"/>
+
+    <TextView android:text="Device IP Address" android:textColor="@color/muted"
+        android:textSize="11sp" android:layout_marginBottom="4dp"/>
+    <EditText android:id="@+id/editIp" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/surface"
+        android:textColor="@color/text_primary" android:hint="192.168.1.64"
+        android:textColorHint="@color/muted" android:padding="10dp"
+        android:inputType="text" android:layout_marginBottom="8dp"/>
+
+    <TextView android:text="Port" android:textColor="@color/muted"
+        android:textSize="11sp" android:layout_marginBottom="4dp"/>
+    <EditText android:id="@+id/editPort" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/surface"
+        android:textColor="@color/text_primary" android:hint="80" android:text="80"
+        android:textColorHint="@color/muted" android:padding="10dp"
+        android:inputType="number" android:layout_marginBottom="8dp"/>
+
+    <TextView android:text="Username" android:textColor="@color/muted"
+        android:textSize="11sp" android:layout_marginBottom="4dp"/>
+    <EditText android:id="@+id/editUser" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/surface"
+        android:textColor="@color/text_primary" android:hint="admin"
+        android:textColorHint="@color/muted" android:padding="10dp"
+        android:inputType="text" android:layout_marginBottom="8dp"/>
+
+    <TextView android:text="Password" android:textColor="@color/muted"
+        android:textSize="11sp" android:layout_marginBottom="4dp"/>
+    <EditText android:id="@+id/editPass" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/surface"
+        android:textColor="@color/text_primary" android:hint="password"
+        android:textColorHint="@color/muted" android:padding="10dp"
+        android:inputType="textPassword" android:layout_marginBottom="8dp"/>
+
+    <TextView android:text="Device Model" android:textColor="@color/muted"
+        android:textSize="11sp" android:layout_marginBottom="4dp"/>
+    <Spinner android:id="@+id/spinnerModel" android:layout_width="match_parent"
+        android:layout_height="48dp" android:background="@color/surface"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:background="@color/card" android:gravity="center_vertical"
+        android:paddingStart="12dp" android:paddingEnd="12dp"
+        android:orientation="horizontal" android:layout_marginBottom="12dp">
+      <TextView android:text="Use HTTPS/TLS" android:textColor="@color/text_primary"
+          android:textSize="12sp" android:layout_weight="1"/>
+      <Switch android:id="@+id/switchTls" android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <Button android:id="@+id/btnConnect" android:layout_width="match_parent"
+        android:layout_height="52dp" android:text="Connect and Save"
+        android:backgroundTint="@color/cyan" android:textColor="@color/black"
+        android:textSize="14sp" android:layout_marginBottom="10dp"/>
+
+    <TextView android:id="@+id/tvStatus" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/card"
+        android:padding="10dp" android:textColor="@color/muted"
+        android:textSize="11sp" android:text="Enter credentials above and tap Connect"/>
+
+  </LinearLayout>
+</ScrollView>

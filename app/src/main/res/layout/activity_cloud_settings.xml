@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg" android:padding="12dp">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <TextView android:text="CLOUD DESTINATIONS" android:textColor="#B388FF" android:textSize="11sp" android:layout_marginBottom="10dp"/>
+    <EditText android:id="@+id/editFbUrl" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/surface" android:textColor="@color/text_primary"
+        android:hint="Firebase: https://project.firebaseio.com/fp.json"
+        android:textColorHint="@color/muted" android:padding="10dp" android:inputType="textUri" android:textSize="11sp" android:layout_marginBottom="6dp"/>
+    <EditText android:id="@+id/editApiUrl" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/surface" android:textColor="@color/text_primary"
+        android:hint="Custom API: https://api.yourserver.com/fingerprints"
+        android:textColorHint="@color/muted" android:padding="10dp" android:inputType="textUri" android:textSize="11sp" android:layout_marginBottom="6dp"/>
+    <EditText android:id="@+id/editApiKey" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/surface" android:textColor="@color/text_primary"
+        android:hint="API Key / Bearer Token" android:textColorHint="@color/muted"
+        android:padding="10dp" android:inputType="textPassword" android:layout_marginBottom="6dp"/>
+    <EditText android:id="@+id/editMqttBroker" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/surface" android:textColor="@color/text_primary"
+        android:hint="MQTT Broker: mqtt://broker.example.com:1883"
+        android:textColorHint="@color/muted" android:padding="10dp" android:inputType="text" android:textSize="11sp" android:layout_marginBottom="6dp"/>
+    <EditText android:id="@+id/editMqttTopic" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/surface" android:textColor="@color/text_primary"
+        android:hint="MQTT Topic" android:textColorHint="@color/muted"
+        android:padding="10dp" android:inputType="text" android:layout_marginBottom="10dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:background="@color/card" android:gravity="center_vertical"
+        android:paddingStart="12dp" android:paddingEnd="12dp" android:orientation="horizontal" android:layout_marginBottom="2dp">
+      <TextView android:text="Push Enrolled Users" android:textColor="@color/text_primary" android:textSize="12sp" android:layout_weight="1"/>
+      <Switch android:id="@+id/switchPushUsers" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:background="@color/card" android:gravity="center_vertical"
+        android:paddingStart="12dp" android:paddingEnd="12dp" android:orientation="horizontal" android:layout_marginBottom="2dp">
+      <TextView android:text="Push Access Events" android:textColor="@color/text_primary" android:textSize="12sp" android:layout_weight="1"/>
+      <Switch android:id="@+id/switchPushEvents" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:background="@color/card" android:gravity="center_vertical"
+        android:paddingStart="12dp" android:paddingEnd="12dp" android:orientation="horizontal" android:layout_marginBottom="10dp">
+      <TextView android:text="Auto-sync background" android:textColor="@color/text_primary" android:textSize="12sp" android:layout_weight="1"/>
+      <Switch android:id="@+id/switchAutoSync" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+      <Button android:id="@+id/btnSaveCloud" android:layout_width="0dp" android:layout_weight="1"
+          android:layout_height="48dp" android:text="Save Settings"
+          android:backgroundTint="@color/green" android:textColor="@color/black" android:layout_marginEnd="4dp"/>
+      <Button android:id="@+id/btnPushNow" android:layout_width="0dp" android:layout_weight="1"
+          android:layout_height="48dp" android:text="Push Now"
+          android:backgroundTint="#7C3AED" android:textColor="@color/white"/>
+    </LinearLayout>
+    <TextView android:id="@+id/tvPushLog" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/card"
+        android:textColor="@color/muted" android:textSize="10sp" android:padding="10dp"
+        android:text="Push log appears here" android:fontFamily="monospace" android:lineSpacingExtra="3dp"/>
+  </LinearLayout>
+</ScrollView>
